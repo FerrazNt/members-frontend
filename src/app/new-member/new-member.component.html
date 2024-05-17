@@ -1,0 +1,45 @@
+<h3 class="titulo-pagina">Novo Membro</h3>
+<br />
+    <div class="form-row">
+        <div class="form-group row">
+            <div class="imagem_member" style="background-image: url('{{member.photo}}');">
+                @if (member.photo == null || member.photo == "") {
+                    <i style="font-size: 100px;margin: -21px 0px 0px -11px;position: absolute; color:#cdcdcd" class="bi bi-person-circle"></i> 
+                }
+            </div> 
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group row">
+            <label for="member_nome" class="col-sm-2 col-form-label" >Primeiro Nome</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="member_nome" id="member_nome" [(ngModel)]="member.nome" /><br />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="member_segundo_nome" class="col-sm-2 col-form-label" >Segundo Nome</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="member_segundo_nome" id="member_segundo_nome" [(ngModel)]="member.sobrenome" /><br />
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group row">
+            <label for="member_segundo_fone" class="col-sm-2 col-form-label" >Telefone</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="member_segundo_fone" id="member_segundo_fone" [(ngModel)]="member.phone" /><br />
+            </div>            
+        </div>
+        <div class="form-group row">
+            <label for="member_segundo_mail" class="col-sm-2 col-form-label" >E-Mail</label>
+            <div class="col-sm-3">
+                <input type="email" class="form-control" name="member_segundo_mail" id="member_segundo_mail" [(ngModel)]="member.email" />
+            </div>            
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 mt-3">
+                <button type="button" class="btn btn-success me-2" (click)="save()"><i class="bi bi-floppy-fill"></i>&nbsp; Salvar</button> 
+            </div>            
+        </div>
+    </div>
+    

@@ -1,0 +1,53 @@
+<h3 class="titulo-pagina">Detalhes do Membro</h3>
+<br />
+    <div class="form-group row">
+        <div class="imagem_member" style="background-image: url('{{selected_member.photo}}');">
+            @if (selected_member.photo == null || selected_member.photo == "") {
+                <i style="font-size: 100px;margin: -21px 0px 0px -11px;position: absolute; color:#cdcdcd" class="bi bi-person-circle"></i> 
+            }
+        </div>        
+    </div>
+    <div class="form-row"> 
+        <div class="form-group row">
+            <label for="selected_member_id" class="col-sm-2 col-form-label" >Código:</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" name="selected_member_id" id="selected_member_id" [(ngModel)]="selected_member.id" readonly disabled /><br />
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group row">
+            <label for="selected_member_nome" class="col-sm-2 col-form-label" >Primeiro Nome</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="selected_member_nome" id="selected_member_nome" [(ngModel)]="selected_member.nome" /><br />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="selected_member_segundo_nome" class="col-sm-2 col-form-label" >Segundo Nome</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="selected_member_segundo_nome" id="selected_member_segundo_nome" [(ngModel)]="selected_member.sobrenome" /><br />
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group row">
+            <label for="selected_member_segundo_fone" class="col-sm-2 col-form-label" >Telefone</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="selected_member_segundo_fone" id="selected_member_segundo_fone" [(ngModel)]="selected_member.phone" /><br />
+            </div>            
+        </div>
+        <div class="form-group row">
+            <label for="selected_member_segundo_mail" class="col-sm-2 col-form-label" >E-Mail</label>
+            <div class="col-sm-3">
+                <input type="email" class="form-control" name="selected_member_segundo_mail" id="selected_member_segundo_mail" [(ngModel)]="selected_member.email" />
+            </div>            
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 mt-3">
+                <button type="button" class="btn btn-warning me-2" (click)="update()"><i class="bi bi-floppy-fill"></i>&nbsp; Atualizar</button> 
+                <button type="button" class="btn btn-success me-2" (click)="newMmeber()"><i class="bi bi-person-plus-fill"></i>&nbsp; Novo</button>
+                <button type="button" class="btn btn-danger me-2" (click)="deleteMember()"><i class="bi bi-person-x"></i>&nbsp; Deletar</button>
+            </div>            
+        </div>
+    </div>
+    
